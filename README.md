@@ -1,7 +1,84 @@
-# Soc-portfolio-
-this repository is designed for experimenting with Wireshark for packet analysis and symon for windows log file.
-The reason why this project important
-✔ You can observe real network traffic using Wireshark (packets will be capture in the .pcap file for further investigation).
-✔ You create persistent endpoint telemetry (Sysmon)
-✔ You analyze them to detect suspicious behavior
-✔ You document findings in a reproducible way
+# 👋 Hi, I'm Ashagre Beshah
+
+🚀 Aspiring **IT Infrastructure & Cybersecurity Professional**  
+🔐 Passionate about systems, networks, and secure digital environments  
+
+---
+
+## 👨‍💻 About Me
+
+- 💼 Background in **public health leadership** and **customer-facing roles**
+- 🔄 Transitioning into the **tech & cybersecurity industry**
+- 🖥️ Hands-on experience with **Linux, networking, firewalls, and system hardening**
+- 🌱 Fast learner, adaptive, and motivated to take on technical challenges
+- 🎯 Career goal: **IT Infrastructure Technician / Cybersecurity Specialist**
+
+---
+
+## 🛠️ Technical Skills
+
+### 💻 Systems & Infrastructure
+- Linux (Virtual Machines, CLI)
+- Windows OS
+- User & Access Management
+- Hardware Troubleshooting
+
+### 🌐 Networking & Security
+- Router & Firewall Configuration
+- Web Server Hardening
+- IoT Security Basics
+- Network Troubleshooting
+- Security Best Practices
+
+### 🧰 Tools & Technologies
+- Git & GitHub
+- Microsoft Office (Advanced)
+- Virtualization (VMware / VirtualBox)
+- Basic Graphic Design Tools
+
+---
+
+## 📚 Currently Learning
+- Advanced Linux Administration
+- Network Security & Monitoring
+- Cybersecurity Fundamentals
+- Cloud & Infrastructure Concepts
+
+---
+
+## 🧠 Soft Skills
+- Strong Communication & Consultation
+- Problem Solving & Critical Thinking
+- Customer Service in Fast-Paced Environments
+- Team Leadership & Quality Assurance
+
+---
+
+## 📊 Projects
+
+<h2>Project one</h2>
+Packet capturing and analysis using Wireshark and TCPDump
+<h2>Project two</h2>
+ SIEM project using Wazuh
+ <h2>Project Three</h2>
+  Web application security (Apaches server hardening and web application firewall) 
+        <ol>Hiding server banner</ol>
+        <ol>restricting login policy using Fail2ban configuration </ol>
+        <ol>Modsecurity for preventing injection attack</ol>
+      
+<h2>Project four</h2>
+  Developing enterprise level network topology and applied firewall for filtering traffic
+      <ol>apply access control list</ol>
+      <ol>Zone based Policy Firewall configuration</ol>
+
+---
+
+## 📫 Connect With Me
+
+- 💼 LinkedIn: [www.linkedin.com/in/ashagre-beshah-82ba3a2ba] 
+- 📧 Email: My.misalie2all@gmail.com
+
+---
+
+⭐ *Always eager to learn, build, and secure better systems.*
+
