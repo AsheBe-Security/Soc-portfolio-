@@ -70,12 +70,17 @@ AsheBe-Security(https://github.com/AsheBe-Security/Wireshark-packet-capture-anal
    Hiding server banner (to aviod giving too much information for cyber attack)
    Restricting login policy using Fail2ban configuration (aviod brutforce attack)
    Modsecurity for preventing injection attack (prevent possible DDoS attack
+   
    **Look in to the project**
+   
    https://github.com/AsheBe-Security/Web-server-Apache-security
       
 ## Project four
+
   Developing enterprise level network topology and applied firewall for filtering traffic
-      1. apply access control list
+  
+      1. Apply access control list
+      
       2. Zone based Policy Firewall configuration
 
 ---
