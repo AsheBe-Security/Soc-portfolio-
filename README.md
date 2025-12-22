@@ -59,15 +59,19 @@
 
 ## 📊 Projects
 
-<h2>Project one</h2>
-Packet capturing and analysis using Wireshark and TCPDump
-<h2>Project two</h2>
+## Project one
+#### Packet capturing and analysis using Wireshark and TCPDump
+AsheBe-Security(https://github.com/AsheBe-Security/Wireshark-packet-capture-analysis)
+
+## Project two
  SIEM project using Wazuh
- <h2>Project Three</h2>
-  Web application security (Apaches server hardening and web application firewall) 
-        <ol>Hiding server banner</ol>
-        <ol>restricting login policy using Fail2ban configuration </ol>
-        <ol>Modsecurity for preventing injection attack</ol>
+## Project Three
+ #### Web application security (Apaches server hardening and web application firewall) 
+   #### Hiding server banner (to aviod giving too much information for cyber attack)
+   #### Restricting login policy using Fail2ban configuration (aviod brutforce attack)
+   #### Modsecurity for preventing injection attack (prevent possible DDoS attack
+   Look in to the project
+   https://github.com/AsheBe-Security/Web-server-Apache-security
       
 <h2>Project four</h2>
   Developing enterprise level network topology and applied firewall for filtering traffic
