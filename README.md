@@ -1,3 +1,6 @@
+
+![Dec 20, 2025, 03_41_49 PM](https://github.com/user-attachments/assets/e83b8e91-4c0c-4af0-acc1-40fe48172b3c)
+
 # 👋 Hi, I'm Ashagre Beshah
 
 🚀 Aspiring **IT Infrastructure & Cybersecurity Professional**  
