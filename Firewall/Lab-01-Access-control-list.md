@@ -19,19 +19,22 @@ Due to its applicability on the layer 3 and four of the OSI model, i will be usi
 
 - R1 enable
 - R1# config terminal
-- R1(config)# ip access-list extended
+- R1(config)# ip access-list extended INBOUND
 - R1(config-ext-nacl)# Remark Permits inside HTTP and HTTPS traffic
-- R1(config-ext-nacl)# permit tcp 192.168.1.2 0.0.0.255 any eq 80 (HTTP)
-- R1(config-ext-nacl)# permit tcp 192.168.1.2 0.0.0.255 192.168.1.3 0.0.0.255 any eq 443 (HTTPS)
-- R1(config-ext-nacl)# permit tcp 192.168.1.3 0.0.0.255 any eq 25 (SMTP)
-- R1(config-ext-nacl)# permit icmp 192.168.2.3 0.0.0.255 192.168.1.2 0.0.0.255 (remark only ping is allowed between pc with the networks)
+- R1(config-ext-nacl)# permit tcp host 192.168.1.2 any eq 80
+- R1(config-ext-nacl)# permit tcp host 192.168.1.2 any eq 443
+- R1(config-ext-nacl)# permit tcp host 192.168.1.3 any eq 443 
+- R1(config-ext-nacl)# permit tcp host 192.168.1.3 any eq 25 
+- R1(config-ext-nacl)# permit icmp host 192.168.1.2 host 192.168.2.2 echo 
+- R1(config-ext-nacl)# permit icmp host 192.168.1.3 host 192.168.2.3 echo
+- R1(config-ext-nacl)# deny ip any any
 - R1(config-ext-nacl)# exit
 - R1(config)#
 
   **OUTBOUND**
   
 - R1(config)#
-- R1(config)# ip access-list extended
+- R1(config)# ip access-list extended OUTBOUND
 - R1(config-ext-nacl)# Remark Only permit returning HTTP and HTTPS traffic
 - R1(config-ext-nacl)# permit tcp any 192.168.1.2 0.0.0.255 192.168.1.3 0.0.0.255   established
 - R1(config-ext-nacl)# exit
