@@ -36,7 +36,10 @@ Due to its applicability on the layer 3 and four of the OSI model, i will be usi
 - R1(config)#
 - R1(config)# ip access-list extended OUTBOUND
 - R1(config-ext-nacl)# Remark Only permit returning HTTP and HTTPS traffic
-- R1(config-ext-nacl)# permit tcp any 192.168.1.2 0.0.0.255 192.168.1.3 0.0.0.255   established
+- R1(config-ext-nacl)# permit tcp any eq 80 host 192.168.1.2
+- R1(config-ext-nacl)# permit tcp any eq 443 host 192.168.1.2
+- R1(config-ext-nacl)# permit tcp any eq 443 host 192.168.1.3
+- R1(config-ext-nacl)# deny ip any any
 - R1(config-ext-nacl)# exit
 
 **Implementation of ACL to the interface**
@@ -45,3 +48,7 @@ Due to its applicability on the layer 3 and four of the OSI model, i will be usi
 - R1(config-if)# ip access-group SURFING in
 - R1(config-if)# ip access-group BROWSING out
 - R1(config-if)# end
+
+---
+**After Implementation of ACL on to the Routers**
+Network A was allowed to sent out ICMP (ping) packets to the other side but any form of ping packet will be block comming in.
