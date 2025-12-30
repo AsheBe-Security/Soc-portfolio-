@@ -45,8 +45,8 @@ Due to its applicability on the layer 3 and four of the OSI model, i will be usi
 **Implementation of ACL to the interface**
 
 - R1(config)# interface g0/0/0
-- R1(config-if)# ip access-group SURFING in
-- R1(config-if)# ip access-group BROWSING out
+- R1(config-if)# ip access-group INBOUND in
+- R1(config-if)# ip access-group OUTBOUND out
 - R1(config-if)# end
 
 ---
