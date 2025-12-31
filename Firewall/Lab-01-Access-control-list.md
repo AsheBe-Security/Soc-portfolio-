@@ -36,9 +36,10 @@ Due to its applicability on the layer 3 and four of the OSI model, i will be usi
 - R1(config)#
 - R1(config)# ip access-list extended OUTBOUND
 - R1(config-ext-nacl)# Remark Only permit returning HTTP and HTTPS traffic
-- R1(config-ext-nacl)# permit tcp any eq 80 host 192.168.1.2
-- R1(config-ext-nacl)# permit tcp any eq 443 host 192.168.1.2
-- R1(config-ext-nacl)# permit tcp any eq 443 host 192.168.1.3
+- R1(config-ext-nacl)# permit tcp any host 192.168.1.2 established
+- R1(config-ext-nacl)# permit tcp any host 192.168.1.3 established
+- R1(config-ext-nacl)# permit icmp host 192.168.2.2 host 192.168.1.2 echo-reply
+- R1(config-ext-nacl)# permit icmp host 192.168.2.3 host 192.168.1.3 echo-reply
 - R1(config-ext-nacl)# deny ip any any
 - R1(config-ext-nacl)# exit
 
