@@ -52,4 +52,24 @@ Due to its applicability on the layer 3 and four of the OSI model, i will be usi
 
 ---
 **After Implementation of ACL on to the Routers**
-Network A was allowed to sent out ICMP (ping) packets to the other side but any form of ping packet will be block comming in.
+A picture below shows the configuration of aces in the acl on the cisco router 
+
+<img width="807" height="300" alt="Screenshot 2026-01-01 170529" src="https://github.com/user-attachments/assets/a60b9b3a-6081-4bbb-a37a-aee51b62a7c3" />
+
+After creating the ACL, it will be assigned to the interface using command
+R1(config)# interface FastEthernet0/0
+R1(config-if)# ip access-group INBOUND in
+R1(config-if)# ip access-group OUTBOUND out
+R1(config-if)# exit
+
+<img width="567" height="383" alt="Screenshot 2026-01-01 173135" src="https://github.com/user-attachments/assets/2d1da851-e891-4ccb-bd8e-24e4ad633eb1" />
+
+R1(config)# write memory (remark for saving the acl configuration in to the router)
+
+<img width="565" height="365" alt="Screenshot 2025-12-31 192706" src="https://github.com/user-attachments/assets/eca7e247-6bf8-45e2-9acb-b0199699d286" />
+
+Network A was allowed to sent out ICMP (ping) packets to the other side and its replay will be accepted. the same will happen to the http/https and email traffic.
+
+<img width="611" height="627" alt="Screenshot 2025-12-31 195029" src="https://github.com/user-attachments/assets/85d09ae3-a1cc-4801-8588-156db0eb6eb0" />
+<img width="746" height="557" alt="Screenshot 2025-12-31 192754" src="https://github.com/user-attachments/assets/2b2d7f9e-6f8c-40c2-9b35-34994f247661" />
+
