@@ -2,7 +2,8 @@
 
 **First step - Design network topology**
 
-![1228(1)](https://github.com/user-attachments/assets/5575b592-b746-419f-b8d7-e61130787905)
+![0106(1)](https://github.com/user-attachments/assets/ac1b0575-5308-4012-9144-b89946ba27d9)
+
 
 IP address 
 
