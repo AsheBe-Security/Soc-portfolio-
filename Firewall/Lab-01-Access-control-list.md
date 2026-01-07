@@ -7,7 +7,8 @@
 
 IP address 
 
-<img width="862" height="248" alt="Screenshot 2025-12-29 000143" src="https://github.com/user-attachments/assets/dc3df7c6-7d04-4b87-a3f8-7ffdd4305458" />
+<img width="940" height="358" alt="Screenshot 2026-01-07 185715" src="https://github.com/user-attachments/assets/2eeebc83-1640-4bfa-b421-2698cfe8dddd" />
+
 
 **Determin the purpose of the Access Control Lists**
 - Determin the type of traffic allowed to go outside the internet
