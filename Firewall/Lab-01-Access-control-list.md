@@ -75,5 +75,6 @@ Network A was allowed to sent out ICMP (ping) packets to the other side and its 
 <img width="611" height="627" alt="Screenshot 2025-12-31 195029" src="https://github.com/user-attachments/assets/85d09ae3-a1cc-4801-8588-156db0eb6eb0" />
 <img width="746" height="557" alt="Screenshot 2025-12-31 192754" src="https://github.com/user-attachments/assets/2b2d7f9e-6f8c-40c2-9b35-34994f247661" />
 
+---
 **Website and Email service access control**
 
