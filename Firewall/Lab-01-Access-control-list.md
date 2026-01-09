@@ -106,4 +106,14 @@ Steps i carried out
 
 
 4. Implement ACL filtering email and web traffics
+   
+<img width="801" height="657" alt="Screenshot 2026-01-09 194834" src="https://github.com/user-attachments/assets/7c169252-f16b-4147-b45f-61375b3f4d19" />
 
+On the ACEs, i specify to allow access to a website to PC0 but deny for PC1 and allow only PC1 email services. Only PC0 can ping to PC2 and PC1 to PC3.
+This method can show that,within the corporate network different individuals have different permission (role based access control) by using ACL.
+
+<img width="1746" height="888" alt="Screenshot 2026-01-09 195356" src="https://github.com/user-attachments/assets/c635d547-9347-42cd-824c-5df99ed24b1a" />
+
+<img width="1747" height="878" alt="Screenshot 2026-01-09 195713" src="https://github.com/user-attachments/assets/6b62de25-ab49-4734-bb61-845fc4bc92d4" />
+
+<img width="1742" height="883" alt="Screenshot 2026-01-09 195848" src="https://github.com/user-attachments/assets/f2838c33-da4a-4e9a-92a8-b5643fc29d10" />
