@@ -1,6 +1,6 @@
 # Lab 01 Access Control list
 
-**First step - Design network topology**
+**1. First step - Design network topology**
 
 ![0106(1)](https://github.com/user-attachments/assets/ac1b0575-5308-4012-9144-b89946ba27d9)
 
@@ -10,10 +10,12 @@ IP address
 <img width="940" height="358" alt="Screenshot 2026-01-07 185715" src="https://github.com/user-attachments/assets/2eeebc83-1640-4bfa-b421-2698cfe8dddd" />
 
 
-**Determin the purpose of the Access Control Lists**
+**2. Determin the purpose of the Access Control Lists**
 - Determin the type of traffic allowed to go outside the internet
 - Deny any other unwanted traffic access in to the private network
 - Monitor and control cross communication between the pcs within the network
+
+**3. write the commandline using text editor and apply it on the router cli**
 
 Due to its applicability on the layer 3 and four of the OSI model, i will be using extended ACL for this lab
 
@@ -45,7 +47,7 @@ Due to its applicability on the layer 3 and four of the OSI model, i will be usi
 - R1(config-ext-nacl)# deny ip any any
 - R1(config-ext-nacl)# exit
 
-**Implementation of ACL to the interface**
+**4. Implementation of ACL to the interface**
 
 - R1(config)# interface g0/0/0
 - R1(config-if)# ip access-group INBOUND in
@@ -53,7 +55,7 @@ Due to its applicability on the layer 3 and four of the OSI model, i will be usi
 - R1(config-if)# end
 
 ---
-**After Implementation of ACL on to the Routers**
+**5. After Implementation of ACL on to the Routers**
 A picture below shows the configuration of aces in the acl on the cisco router 
 
 <img width="807" height="300" alt="Screenshot 2026-01-01 170529" src="https://github.com/user-attachments/assets/a60b9b3a-6081-4bbb-a37a-aee51b62a7c3" />
@@ -76,5 +78,18 @@ Network A was allowed to sent out ICMP (ping) packets to the other side and its 
 <img width="746" height="557" alt="Screenshot 2025-12-31 192754" src="https://github.com/user-attachments/assets/2b2d7f9e-6f8c-40c2-9b35-34994f247661" />
 
 ---
-**Website and Email service access control**
+
+## **Website and Email service access control**
+
+Steps i carried out
+1. connect all pcs with the server
+
+   - I stablish a dummy domian name ('mail.com')
+   - DNS server was configured within the same server for the email to resolve name to ip address
+     
+2. Connection was tested by pinging to the server from all pcs using both the domain or server ip
+   
+    - initially only ping to the ip address was possible, after running network troubleshooting, firewall issue was fixed and ping to the domian was achieved
+      
+3. testing email was exchanged between pcs to see of dns server was working, all emails was sent aand recieved. 
 
