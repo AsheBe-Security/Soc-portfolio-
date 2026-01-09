@@ -90,6 +90,13 @@ Steps i carried out
 2. Connection was tested by pinging to the server from all pcs using both the domain or server ip
    
     - initially only ping to the ip address was possible, after running network troubleshooting, firewall issue was fixed and ping to the domian was achieved
-      
-3. testing email was exchanged between pcs to see of dns server was working, all emails was sent aand recieved. 
+    - 
+ <img width="662" height="518" alt="Screenshot 2026-01-09 184335" src="https://github.com/user-attachments/assets/78914f42-a692-4b88-a579-42ad1ce10eca" />
+ 
+ <img width="758" height="557" alt="Screenshot 2026-01-09 184227" src="https://github.com/user-attachments/assets/329300c9-5c43-4c6c-8b21-77008ef1fcff" />
+
+     
+3. testing email was exchanged between pcs to see of dns server was working, all emails was sent aand recieved.
+   
+<img width="1857" height="847" alt="Screenshot 2026-01-09 184626" src="https://github.com/user-attachments/assets/c440037d-8227-4744-8e70-c8785803fc10" />
 
