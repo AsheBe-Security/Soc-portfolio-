@@ -100,3 +100,10 @@ Steps i carried out
    
 <img width="1857" height="847" alt="Screenshot 2026-01-09 184626" src="https://github.com/user-attachments/assets/c440037d-8227-4744-8e70-c8785803fc10" />
 
+4. index.html i designed for this lab was uploaded in to the web server
+
+  <img width="977" height="983" alt="Screenshot 2026-01-09 190433" src="https://github.com/user-attachments/assets/ae3e6578-cf49-4cad-8736-649d43a870cd" />
+
+
+4. Implement ACL filtering email and web traffics
+
