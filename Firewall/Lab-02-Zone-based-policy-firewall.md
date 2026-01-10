@@ -21,20 +21,23 @@ For the sake of efficiency, this test were run devices across the network
 
 <img width="1738" height="847" alt="Screenshot 2026-01-10 213829" src="https://github.com/user-attachments/assets/96252c47-ae91-44af-84bd-831811bdd6cb" />
 
+---
 **steps creating Zone Based Security Policy**
-1. Determining the Zones
-   Specialist unit will be taken as internal zone as communication from this zone will be inspected/filtered and any indepedent communication from the outside will be rejected.
+1. **Determining the Zones**
+   Specialist unit will be taken as internal zone as communication from this zone will be inspected/filtered and any indepedent communication from the outside will be rejected. OPERATION center considered to be less secure and only established connection will be allowed to enter to the SPECIALIST unit. The data center will be considered DMZ (demiliterized Zone)
    
    - R1#config t
    - R1(config)# zone security SPECIALIST
    - R1(config-sec-zone)#exit
    - R1(config)zone security OPERATION
    - R1(config-sec-zone)#exit
+   - R1(config)#zone security DMZ
+   - R1(config-sec-zone)#exit
    - R1(config)#
    
-2. Specify the traffic
+2. **Specify the traffic**
    determining the traffic to which the policy will be applied was done by using a class-map. Within the class packets are filtered based on the set of criteria. if we want the packet to fulfill atleast one of the criteria, match-any will be applied but if all criteria should be uphold, match-all will be used. For the SPECIALIST zone we will use match-all option for retrict security.
-   - R1(config)# class-map type inspect match-all **INBOUND-TRAFFIC**
+   - R1(config)# class-map type inspect match-any **INBOUND-TRAFFIC**
    - R1(config-cmap)#match protocol icmp
    - R1(config-cmap)#match protocol http
    - R1(config-cmap)#match protocol https
@@ -44,7 +47,7 @@ For the sake of efficiency, this test were run devices across the network
      
    These are the traffic which will be allowed to leave the zone in to the public
    
-4. Define the actions
+4. **Define the actions**
 after the classes are established with the criteria, the next step in to define what action to take for the traffic which meets the criteria. This can be achived with the policy map. under the policy map    three action can be carriedout, **inspect**, **pass** and **drop**
    - R1(config)# policy-map type inspect FILTER-INBOUND
    - R1(config-pmap)# class type inspect INBOUND-TRAFFIC
@@ -52,13 +55,13 @@ after the classes are established with the criteria, the next step in to define 
      
   **inspect** - a state based traffic control where the router will keep security or session information while allowing the traffic the go out and return as a request to the zone by denying the rest of communication
   
-5. Identify a Zone-Pair and Match to a Policy
+5. **Identify a Zone-Pair and Match to a Policy**
 Two zones were created at the begning, so we need to create zone-pair to apply the matching criteria and implement the action specified in the policy.
 
     - R1(config)#zone-pair policy SPECIALIST-OPERATION  source SPECIALIST destination OPERATION
     - R1(config-sec-zone-pair)#service-policy type inspect FILTER-INBOUND
    Now the policy within the policy map are assigned in to the zone pair, so that any memeber of this zone, the traffic will be filter based on the policy action
-6. Assing Zones in to the interface
+6. **Assing Zones in to the interface**
 
    - R1(config)# interface FastEthernet0/0
    - R1(config-if)#zone-member security SPECIALIST
