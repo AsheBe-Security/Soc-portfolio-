@@ -4,7 +4,22 @@
 
 Based on the topology i designed using cisco packet tracer, it has three zone, specialist zone with the highest level of security, operation zone where relatively less secured and the Data center protected using DMZ
 Based on the gif above
-communication between pcs and server were tested and the network id behaving they way designed. little effor were needed to improve address resolution since it lives on the separate server.
+communication between pcs and server were tested and the network is behaving they way designed. little effor were needed to improve address resolution since it lives on the separate server.
+
+**Pinging** from device in one network to the next to show live connectivity
+
+<img width="875" height="875" alt="Screenshot 2026-01-10 215201" src="https://github.com/user-attachments/assets/ee60419d-47d5-440f-934b-cbbdef0ff94d" />
+
+<img width="981" height="966" alt="Screenshot 2026-01-10 215013" src="https://github.com/user-attachments/assets/78363168-4e4b-484d-aa46-c329393e2be9" />
+
+Test both email and web services by involving DNS server for name to ip resolution
+For the sake of efficiency, this test were run devices across the network 
+
+<img width="1747" height="856" alt="Screenshot 2026-01-10 214237" src="https://github.com/user-attachments/assets/0c18c8c8-3b6a-4f8e-b2fd-a68adcac6dd5" />
+
+<img width="1742" height="847" alt="Screenshot 2026-01-10 214034" src="https://github.com/user-attachments/assets/a01a483e-e5b1-4c1a-9a08-232f4eb155cf" />
+
+<img width="1738" height="847" alt="Screenshot 2026-01-10 213829" src="https://github.com/user-attachments/assets/96252c47-ae91-44af-84bd-831811bdd6cb" />
 
 **steps creating Zone Based Security Policy**
 1. Determining the Zones
