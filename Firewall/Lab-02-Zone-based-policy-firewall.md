@@ -28,32 +28,36 @@ For the sake of efficiency, this test were run devices across the network
    
    - R2#config t
    - R2(config)# zone security SPECIALIST
-   - R2(config-sec-zone)#exit
-   - R2(config)# interface Serial0/0/0 
-   - R2(config-if)zone-member security SPECIALIST
-   - R2(config-if)exit
-   - R1(config)zone security OPERATION
+   - R2(config-sec-zone)#exit 
+   - R2(config-if)#zone-member security SPECIALIST
+   - R2(config-sec-zone)#exit 
+   - R1(config)#zone security OPERATION
    - R1(config-sec-zone)#exit
-   - R2(config)# interface Serial0/1/0 
-   - R2(config-if)zone-member security OPERATION
-   - R2(config-if)exit
+   - R2(config-sec-zone)#zone-member security OPERATION
+   - R2(config-sec-zone)#exit 
    - R1(config)#zone security DMZ
-   - R1(config-sec-zone)#exit
-   - R2(config)# interface GigabiteEthernet0/0 
-   - R2(config-if)zone-member security DMZ 
+   - R1(config-sec-zone)#exit  
    - R1(config)#
    
 2. **Specify the traffic**
    For a trrafic going from the private to OPERATION, we are going to apply ACL
    
    - R2(config)#ip access-list 100 permit ip any any
+     
+   As soon aswe put zones on the topology, all form of communication will be blocked, so inorder to to achive the communication from the SPECIALIST zone, i created ACL which will allows any traffic to and from.
+
    - R2(config)#ip access-list 101 permit ip any host 192.168.12.4
    - R2(config)#ip access-list 101 permit ip any host 192.168.12.2
+     
+   These two ACL are designed to allow communication from the OPERATION zone in to the DMZ to access specifically the email and web service specified with its ip address.
+
    - R2(config)# class-map type inspect match-all  **SPECIALIST-ACL-CLASS**
    - R2(config-cmap)#match access-group 100
    - R2(config) policy map type inspect **SPECIALIST-ACL-POLICY**
    - R2(config-pmap)#class type inspect SPECIALIST-ACL-CLASS
    - R2(config-pmap)#inspect
+   This policy will inspect any traffic going out of the SPECIALIST zone and allowed only returning traffic.
+
 Determining the traffic to which the policy will be applied was done by using a class-map. Within the class packets are filtered based on the set of criteria. if we want the packet to fulfill atleast one of the criteria, match-any will be applied but if all criteria should be uphold, match-all will be used. For the SPECIALIST zone we will use match-all option for retrict security.
    - R2(config)# class-map type inspect match-any **SPECIALIST-OPERATION-CLASS**
    - R2(config-cmap)#match protocol icmp
@@ -124,9 +128,12 @@ Two zones were created at the begning, so we need to create zone-pair to apply t
     - R1(config)#zone-pair policy SPECIALIST-OPERATION  source SPECIALIST destination OPERATION
     - R1(config-sec-zone-pair)#service-policy type inspect FILTER-INBOUND
    Now the policy within the policy map are assigned in to the zone pair, so that any memeber of this zone, the traffic will be filter based on the policy action
+
 6. **Assing Zones in to the interface**
 
    - R1(config)# interface FastEthernet0/0
    - R1(config-if)#zone-member security SPECIALIST
    - R1(config-if)# interface Serial0/1/0
    - R1(config-if)#zone-member security OPERATION
+   - R1(config-if)# interface GigabiteEthernet0/0
+   - R1(config-if)#zone-member security DMZ 
