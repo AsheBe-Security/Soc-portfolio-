@@ -1,4 +1,4 @@
-# Vulnerability scanning (Reconnecience)
+# Vulnerability scanning (Reconnaissance)
 ### nmap  scanning on Ubuntu server using Kali
 
 1. prepare the ubuntu server
@@ -103,4 +103,5 @@ sudo apt install samba -y
 
 
  
+
 
