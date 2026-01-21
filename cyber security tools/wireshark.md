@@ -51,6 +51,7 @@ on this lab i will be able to:
 - HTTP credentials & data in plain text
 - HTTPS data as encrypted TLS blobs
 - Exactly what defenders and attackers can / cannot see
+### perst one - http
 1. make sure both http and https running on ubuntu server
     - sudo ss -tulpn | grep apache
     - it showed both listening on thier respevtive ports
@@ -60,6 +61,15 @@ on this lab i will be able to:
 3. send http request either from the terminal or using a broswer of the ubuntu server
     - curl http://192.168.56.6
     - analyze the captured packets of its behaviors, get and response achieved
-    - packets were not encrypted, so information about the web server was left in plain text including html and its entire content. if credentials were included, it would be left on plain text
+    - packets were not encrypted, we can see
+    - GET / HTTP/1.1
+    - Host header
+    - User-Agent
+    - Full request path
+    - Server response
+    - Page content - (HTML)information about the web server was left in plain text including html and its entire content. if credentials were included, it would be left on plain text
 
-5. 
+### part tw0 - https traffic
+ - curl https://<ubuntu-ip> -k
+
+
