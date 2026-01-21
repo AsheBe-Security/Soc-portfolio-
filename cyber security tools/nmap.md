@@ -1,5 +1,6 @@
 # Vulnerability scanning (Reconnaissance)
 ### nmap  scanning on Ubuntu server using Kali
+For this lab, i will be using ubuntu server and windows host machine as a target and kali linux as attack machine. Both Ubuntu server and kali linux are installed on the virtual box. All steps required to achive a real life vulnerability scanning has been undertaken. so many adjustment to the config files in the ubuntu server to make services running on the sever. 
 
 1. prepare the ubuntu server
    
@@ -103,5 +104,6 @@ sudo apt install samba -y
 
 
  
+
 
 
