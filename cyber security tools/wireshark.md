@@ -84,7 +84,7 @@ on this lab i will be able to:
     - Full request path
     - Server response
     - Page content - (HTML)information about the web server was left in plain text including html and its entire content. if credentials were included, it would be left on plain text.
-      
+in addition, by using a wrong login we have sent a lot of syn request which help me to capture all of the failed connection syn packet.    
 <img width="1278" height="606" alt="Screenshot 2026-01-27 040540" src="https://github.com/user-attachments/assets/cf29b3eb-f7b6-4bbe-9341-346e6baa1374" />
 
 <img width="842" height="437" alt="Screenshot 2026-01-21 185128" src="https://github.com/user-attachments/assets/cd38e699-a138-4b87-8b9e-93014bea8e91" />
@@ -93,6 +93,7 @@ on this lab i will be able to:
 
 ### part tw0 - https traffic
  - curl https://<ubuntu-ip> -k
+
 
 
 
