@@ -92,9 +92,13 @@ in addition, by using a wrong login we have sent a lot of syn request which help
 <img width="851" height="397" alt="Screenshot 2026-01-21 185059" src="https://github.com/user-attachments/assets/4d6251e5-9529-4c44-b8db-fb5179726577" />
 
 ### part tw0 - https traffic
- - curl https://<ubuntu-ip> -k
+ - curl http://ubuntu_server vs curl https://Website_userinput
+   
+<img width="1238" height="927" alt="Screenshot 2026-01-27 114216" src="https://github.com/user-attachments/assets/e8ae9e4d-a554-465c-a69f-f26be424e085" />
 
+<img width="1121" height="787" alt="Screenshot 2026-01-27 115418" src="https://github.com/user-attachments/assets/f096bf0e-5757-443f-a97f-298d34275a79" />
 
+The authentication procedure during the http traffics carried out during the GET session, and all information including the user credentials will be visible in wireshark for http traffic since no encryption done. But for the case of https, tls will be applied and all relevant information will be hidden.
 
 
 
