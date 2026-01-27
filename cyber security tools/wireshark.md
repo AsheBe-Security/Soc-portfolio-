@@ -98,7 +98,8 @@ in addition, by using a wrong login we have sent a lot of syn request which help
 
 <img width="1121" height="787" alt="Screenshot 2026-01-27 115418" src="https://github.com/user-attachments/assets/f096bf0e-5757-443f-a97f-298d34275a79" />
 
-The authentication procedure during the http traffics carried out during the GET session, and all information including the user credentials will be visible in wireshark for http traffic since no encryption done. But for the case of https, tls will be applied and all relevant information will be hidden.
+The authentication procedure during the http traffics carried out at the GET session, and all information including the user credentials will be visible in wireshark for http traffic since no encryption done. But for the case of https, tls will be applied and all sensitive information will be hidden.
+
 
 
 
