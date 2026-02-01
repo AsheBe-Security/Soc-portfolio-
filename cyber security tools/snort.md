@@ -52,3 +52,9 @@ SYN scann the massage or alert
 
 Based on what we learn so far is that, in the IDS mode, snort will allow traffic in to the system but will create an alert or log of any suspicious traffic with its detail information like the ports and protocolo through which the traffic is passing through including the flags (tcp flags) the source ip address
 
+----
+**PART 2️⃣ — Snort as IPS (Inline Blocking)**
+on this lab snort will be configure not only to alert an attack but also the block traffic based on a certain set of rules (snort rules)
+1. Set snort inline mode
+   - sudo apt install -y snort-inline iptables
+
