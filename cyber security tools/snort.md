@@ -50,4 +50,5 @@ SYN scann the massage or alert
 
 <img width="981" height="207" alt="Screenshot 2026-02-01 024122" src="https://github.com/user-attachments/assets/82d4d6fc-09c5-4f33-b84d-191187ff600b" />
 
+Based on what we learn so far is that, in the IDS mode, snort will allow traffic in to the system but will create an alert or log of any suspicious traffic with its detail information like the ports and protocolo through which the traffic is passing through including the flags (tcp flags) the source ip address
 
