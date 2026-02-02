@@ -53,8 +53,32 @@ SYN scann the massage or alert
 Based on what we learn so far is that, in the IDS mode, snort will allow traffic in to the system but will create an alert or log of any suspicious traffic with its detail information like the ports and protocolo through which the traffic is passing through including the flags (tcp flags) the source ip address
 
 ----
-**PART 2️⃣ — Snort as IPS (Inline Blocking)**
+
+# Advanced Snort IPS Lab (Deep Dive)
+
+### 🎯 What You’ll Learn in This Phase
+
+Inline traffic flow (how Snort actually blocks packets)
+- Writing precise DROP rules
+- Preventing false positives
+- Logging & analyzing blocked traffic
+- Simulating real attacks (not just scans)
+  
 on this lab snort will be configure not only to alert an attack but also the block traffic based on a certain set of rules (snort rules)
-1. Set snort inline mode
-   - sudo apt install -y snort-inline iptables
+
+1.Packet → iptables (NFQUEUE) → Snort
+   ├─ MATCH DROP RULE → packet killed ❌
+   └─ NO MATCH → packet forwarded ✅
+   
+In IPS mode, Snort sits inline using NFQUEUE and can actively drop or reject packets before they reach the destination.
+2.Harden Your IPS Setup (Important)
+🔹 Verify Inline Mode Is Active
+        - sudo snort --daq-list
+        - sudo iptables -L -v (for confirming iptables)
+🔹 Make Rules IPS-Safe
+        - sudo nano /etc/snort/snort.conf
+
+
+
+
 
