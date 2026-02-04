@@ -6,6 +6,13 @@ It is designed and implemented three independent security labs demonstrating
 Each lab simulates real-world attacks and applies defensive countermeasures
 aligned with industry best practices.
 
+Tools needed for this lab
+
+1. VirtualBox / VMware
+2. Ubuntu Server (Target server)
+3. Kali Linux (Attacker)
+4. Ubuntu Desktop (Legitimate user)
+
 ### CIA-Triad-Labs
 1. Confidentiality-Lab
 │   - ├── README.md
