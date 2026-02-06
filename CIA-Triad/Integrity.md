@@ -1,4 +1,4 @@
-# 🔐 LAB 2 — Avaliability
+# 🔐 LAB 2 — Integrity
 🎯 Lab Goal
 
 Understand, implement, and verify data integrity by detecting unauthorized modification of data, configurations, and source code using real tools and techniques.
@@ -23,6 +23,8 @@ sttep two: make chnages to the original file, save it and run the hash function
 step three: compare the two hash value (hash.txt and hash1.txt) and see the difference.
   - cat hash.txt
   - cat hash1.txt
+    
+<img width="888" height="676" alt="Screenshot 2026-02-06 082719" src="https://github.com/user-attachments/assets/d9e8d70c-2d3c-4a3a-b7d4-c02e88ac5ea4" />
     
 ### lesson
 No two different file can have the same hash value, this will tell us that, any modification or alteration to our original data will easily be determined using hash function
