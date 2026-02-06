@@ -32,5 +32,15 @@ No two different file can have the same hash value, this will tell us that, any 
 🧪 File Integrity Monitoring
 🛠 Tools
 - AIDE (Advanced Intrusion Detection Environment)
+   Step1 - install aide
+      - sudo apt install aide -y
+  Step1 - initialize aide which will create a database for monitoring any change
+      - sudo aideinit
+  Step3 - Make same changes to the database
+      - sudo mv /var/lib/aide/aide.db.new /var/lib/aide/aide.db
+          - i moved the database in to a new database
+  Step4 - run detection
+      - sudo aide --check
+          - Response - Change detected
   
 
