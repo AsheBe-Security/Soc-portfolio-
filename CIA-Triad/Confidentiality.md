@@ -78,3 +78,45 @@ Another brute force was done to decrypt the file when repreated effort failed
 
 The decrypted file can also be saved in to another readable file or plain text using this command
  - gpg --pinentry-mode loopback -o employee_records.txt -d employee_records.txt.gp
+   
+## Encryption and decryption using openssl
+step-one: Create directories for the lab
+    - mkdir openssl-lab
+    - cd openssl-lab
+step-two: create a test file with some plain text
+    - echo "Confidential data: Lab practice with OpenSSL" > secret.txt
+### 🔬 LAB 1 — Symmetric Encryption (AES)
+
+Step 1: Encrypt the file
+     - openssl enc -aes-256-cbc -salt -in secret.txt -out secret.enc
+Step 2: Verify encryption 
+     - cat secret.enc
+       - we should be able to see unreadable bunch of codes
+Step 3: Decrypt the file to read its content 
+     - openssl enc -aes-256-cbc -d -in secret.enc -out secret_decrypted.txt
+Step 4: Verify integrity
+     - diff secret.txt secret_decrypted.txt
+        - no output which means the maintained the integrity of the original file
+<img width="893" height="497" alt="Screenshot 2026-02-07 095248" src="https://github.com/user-attachments/assets/550f52d6-c48e-423b-bc8a-83434401da83" />
+        
+### 🔬 LAB 2 — Asymmetric Encryption (RSA)
+Step 1: Generate RSA private key
+    - openssl genpkey -algorithm RSA -out private.key -pkeyopt rsa_keygen_bits:2048
+Step 2: Extract public key
+    - openssl rsa -pubout -in private.key -out public.key
+Step 3: Encrypt with public key
+    - openssl pkeyutl -encrypt -pubin -inkey public.key \
+      -in secret.txt -out secret_rsa.enc
+Step 4: Decrypt with private key
+    - openssl pkeyutl -decrypt -inkey private.key \
+       -in secret_rsa.enc -out secret_rsa_decrypted.txt
+  <img width="893" height="452" alt="Screenshot 2026-02-07 100116" src="https://github.com/user-attachments/assets/795e5076-962f-476e-8b46-feb9fc3704f7" />
+     
+Step 5: Verify result
+   - cat secret_rsa_decrypted.txt
+<img width="912" height="437" alt="Screenshot 2026-02-07 100354" src="https://github.com/user-attachments/assets/61b74ba0-2004-4328-ac5d-678ea13293f2" />
+
+
+
+
+
