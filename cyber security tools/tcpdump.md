@@ -45,3 +45,5 @@ Step5: tcpdump can be specified to a protocols or ports
    
 <img width="907" height="381" alt="Screenshot 2026-02-18 103223" src="https://github.com/user-attachments/assets/5eee21fb-2bd5-4539-bd71-02cad30d4c7a" />
    
+Step6: Scanning can be targeted to specific host (providing ip address)
+   - sudo tcpdump -c 10 -i eth0 host 194.168.4.100 (google.com)
