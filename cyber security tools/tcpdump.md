@@ -47,3 +47,7 @@ Step5: tcpdump can be specified to a protocols or ports
    
 Step6: Scanning can be targeted to specific host (providing ip address)
    - sudo tcpdump -c 10 -i eth0 host 194.168.4.100 (google.com)
+  we can also use inbound and oubound traffic
+    - sudo tcpdump -i eth0 src host <ip>
+    - sudo tcpdump -i eth0 dst host <ip>
+Step7: understand the tcp flags
