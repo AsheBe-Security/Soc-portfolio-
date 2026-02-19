@@ -72,3 +72,9 @@ During the first request the packet will provide seq 1982833238, win 64240, opti
 packet vaule or length will be 0 because thier is not payload exchange, only tcp connection will be established.
 as a respons from the server, there is [S.] Syn, Ack meaning the server is saying to the client i got the syn request and ready for connection.
 finally we will get the [.] Ack packet meaning connection has been stablished and tcp handshake is completed.
+Step8: Save the capture packet for later use
+   - sudo tcpdump -i eth0 -w traffic.pcap
+   - sudo tcpdump -r traffic.pcap (if we want to read thee file)
+     
+<img width="908" height="712" alt="Screenshot 2026-02-19 180853" src="https://github.com/user-attachments/assets/a5060762-2fe5-48e2-8036-46680d1b3917" />
+  
