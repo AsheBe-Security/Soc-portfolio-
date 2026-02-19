@@ -78,3 +78,4 @@ Step8: Save the capture packet for later use
      
 <img width="908" height="712" alt="Screenshot 2026-02-19 180853" src="https://github.com/user-attachments/assets/a5060762-2fe5-48e2-8036-46680d1b3917" />
   
+Step9: use advanced filter by using AND/OR/NOT
