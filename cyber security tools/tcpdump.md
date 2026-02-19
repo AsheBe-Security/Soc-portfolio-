@@ -60,12 +60,15 @@ Step7: understand the tcp flags
 step7 capture and read payload before and after ctp connection
 
 <img width="901" height="707" alt="Screenshot 2026-02-19 165728" src="https://github.com/user-attachments/assets/25bd6b48-39a5-4169-9bd7-b330bed4c33a" />
+
 during a tcp handshake, at first we will see a lot of [S] syn packet with source ip address, destination address with itts url and also port (http/80).
 During the first request the packet will provide seq 1982833238, win 64240, options [mss 1460, sackOK, TS, wscale 7] which means tells the server:
+
    - Initial sequence number
    - Max Segment Size = 1460
    - Supports selective ACKs
    - Window scaling enabled
+     
 packet vaule or length will be 0 because thier is not payload exchange, only tcp connection will be established.
 as a respons from the server, there is [S.] Syn, Ack meaning the server is saying to the client i got the syn request and ready for connection.
 finally we will get the [.] Ack packet meaning connection has been stablished and tcp handshake is completed.
