@@ -79,3 +79,8 @@ Step8: Save the capture packet for later use
 <img width="908" height="712" alt="Screenshot 2026-02-19 180853" src="https://github.com/user-attachments/assets/a5060762-2fe5-48e2-8036-46680d1b3917" />
   
 Step9: use advanced filter by using AND/OR/NOT
+     - sudo tcpdump -i eth0 'tcp and (port 80 or port 443)'
+     - sudo tcpdump -i eth0 'not port 22' (if we want to exclude SSH from our scan)
+Note: during the and operand, tcpdump will run both tcp three ways handshake and http trasaction with estimated payload length.
+<img width="897" height="480" alt="Screenshot 2026-02-18 104200" src="https://github.com/user-attachments/assets/d30aa723-a8c3-47d9-a0c3-9aa575c76a3b" />
+     
