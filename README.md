@@ -3,7 +3,8 @@
 
 # 👋 Hi, I'm Ashagre Beshah
 
-🚀 Aspiring **IT Infrastructure & Cybersecurity Professional**  
+🚀 Aspiring **Cybersecurity Professional** 
+🚀 Committed for Cyber security analysis 
 🔐 Passionate about systems, networks, and secure digital environments  
 
 ---
@@ -11,10 +12,10 @@
 ## 👨‍💻 About Me
 
 - 💼 Background in **public health leadership** and **customer-facing roles**
-- 🔄 Transitioning into the **tech & cybersecurity industry**
+- 🔄 Transitioning into the **tecch & cybersecurity industry**
 - 🖥️ Hands-on experience with **Linux, networking, firewalls, and system hardening**
 - 🌱 Fast learner, adaptive, and motivated to take on technical challenges
-- 🎯 Career goal: **IT Infrastructure Technician / Cybersecurity Specialist**
+- 🎯 Career goal: ** Cybersecurity Specialist**
 
 ---
 
@@ -26,13 +27,14 @@
 - User & Access Management
 - Hardware Troubleshooting
 
+---
 ### 🌐 Networking & Security
 - Router & Firewall Configuration
 - Web Server Hardening
 - IoT Security Basics
 - Network Troubleshooting
 - Security Best Practices
-
+---
 ### 🧰 Tools & Technologies
 - Git & GitHub
 - Microsoft Office (Advanced)
@@ -59,9 +61,10 @@
 
 ## 📊 Projects
 
-## Project one
+## Project one - Network Traffic analysis
 #### Packet capturing and analysis using Wireshark and TCPDump
-AsheBe-Security(https://github.com/AsheBe-Security/Wireshark-packet-capture-analysis)
+
+   - https://github.com/AsheBe-Security/Network-traffic-analysis-lab-004
 
 ## Project two
  SIEM project using splunk
@@ -70,29 +73,32 @@ AsheBe-Security(https://github.com/AsheBe-Security/Wireshark-packet-capture-anal
    Hiding server banner (to aviod giving too much information for cyber attack)
    Restricting login policy using Fail2ban configuration (aviod brutforce attack)
    Modsecurity for preventing injection attack (prevent possible DDoS attack
+
+   - https://github.com/AsheBe-Security/Web-application-security-lab-003
    
-   **Look in to the project**
-   
-   https://github.com/AsheBe-Security/Web-server-Apache-security
-      
-## Project four
-
-  Developing enterprise level network topology and applied firewall for filtering traffic
-  
-Apply access control list
-
-(https://github.com/AsheBe-Security/Soc-portfolio-/blob/main/Firewall/Lab-01-Access-control-list.md)
-      
-Zone based Policy Firewall configuration
-
-https://github.com/AsheBe-Security/Soc-portfolio-/blob/main/Firewall/Lab-02-Zone-based-policy-firewall.md
-      
- IPtables 
+ ## Project four - CIA Triad (information security)
  
- https://github.com/AsheBe-Security/Soc-portfolio-/blob/main/Firewall/Lab-03-iptables-firewall.md
-
+   This project is prepareed for practicing information security in the context of confidentiality (cyrptography- encryption using openssl/AES) and integrity (Hash function).
+   
+   - https://github.com/AsheBe-Security/Data-confidentiality-integrity-CIA-Triad
       
+## Project five - Firewall for network security
 
+  For this project i have desgined enterprise level network topology and applied network traffic rules for filtering traffic packets.
+  
+**Apply access control list**
+
+   - https://github.com/AsheBe-Security/Firewall-lab-02/blob/main/Lab-01-Access-control-list.md
+      
+**Zone based Policy Firewall configuration**
+
+   - https://github.com/AsheBe-Security/Firewall-lab-02/blob/main/Lab-02-Zone-based-policy-firewall.md
+      
+ **IPtables** 
+ 
+   - https://github.com/AsheBe-Security/Firewall-lab-02/blob/main/Lab-03-iptables-firewall.md
+
+  
 ---
 
 ## 📫 Connect With Me
